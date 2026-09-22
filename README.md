@@ -1,11 +1,48 @@
 # tutorial-zh
 
-> 中文「手把手」教程集合。和 [@c991china/learning-notes](https://github.com/c991china/learning-notes) 互补：那边是要点笔记，这里是分步教程。
+给组里新同学写的一套入门材料。
 
-## 教程
-- [01 · MCP 是什么、怎么用](tutorials/01-mcp是什么.md)
-- [02 · 用 Python 调用 HTTP API](tutorials/02-用python调用http-api.md)
+起因是每次来实习生，我都得从头讲一遍"怎么装 Python、怎么用 git、服务器上那个
+容器是怎么回事"，讲第三遍的时候我就烦了，干脆写下来。后来发现写下来还有个好处：
+我自己忘了某个命令的细节时也能翻。
 
-## 生态联动
-- 要点笔记 → [@c991china/learning-notes](https://github.com/c991china/learning-notes)
-- 搜索接入指南 → [@c991china/anysearch-mcp-guide](https://github.com/c991china/anysearch-mcp-guide)
+不是教材，也不打算讲得多全。就是把我踩过的坑、我平时真正在用的那套流程写清楚，
+你照着做能跑起来就行。
+
+## 适合谁看
+
+- 会一点编程，但没正经用过命令行
+- 听说过 git / docker，但 `git rebase` 还是不敢用
+- 第一次要往服务器上部署东西
+
+如果你已经是老手了，这套东西对你没什么用，直接关掉就好。
+
+## 目录
+
+| 篇 | 标题 | 大概讲什么 |
+|----|------|-----------|
+| 00 | [前言](tutorials/00-前言.md) | 这套材料怎么用，一些废话 |
+| 01 | [环境搭建](tutorials/01-环境搭建.md) | 终端、Python、虚拟环境、编辑器 |
+| 02 | [用 git 协作](tutorials/02-用git协作.md) | 分支、commit、冲突、code review |
+| 03 | [用 docker 容器化](tutorials/03-用docker容器化.md) | 镜像、容器、compose、常见报错 |
+| 04 | [用 Python 写脚本](tutorials/04-用python写脚本.md) | 读写文件、命令行参数、日志 |
+| 05 | [部署入门](tutorials/05-部署入门.md) | systemd、nginx、看日志 |
+| 06 | [数据库基础](tutorials/06-数据库基础.md) | SQL、索引、连接、慢查询 |
+| 07 | [调试技巧](tutorials/07-调试技巧.md) | pdb、看堆栈、二分定位 |
+
+## 怎么用
+
+按顺序看最好，但也不用全看。赶时间的话：
+
+- 只想把代码跑起来 → 01 + 04
+- 要和别人一起改代码 → 02
+- 要上线 → 03 + 05
+- 线上出问题了 → 07
+
+每篇里的命令都是我在 macOS 和 Ubuntu 上跑过的。Windows 我基本不用，只有个别地方
+会提一句，你要是用 Windows 记得开 WSL。
+
+## 说明
+
+这些命令你自己机器上跑就行，别在生产服务器上直接复制粘贴，尤其是带 `rm` 的那些。
+我把 `sudo rm -rf` 的教训留在 00 篇里了，你可以去看看。
